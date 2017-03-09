@@ -14,3 +14,14 @@ def nextDay(year, month, day):
             return year + 1, 1, 1
 
 print nextDay(2012, 2, 30) 
+
+def dateIsBefore(year1, month1, day1, year2, month2, day2):
+    """helper procedure for what will be daysBetweenDates()"""
+    if year1 < year2:
+        return True
+    if year1 == year2:
+        if month1 < month2:
+            return True
+        if month1 == month2:
+            return day1 < day2
+    return False
