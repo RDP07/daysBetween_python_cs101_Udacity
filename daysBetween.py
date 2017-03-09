@@ -1,11 +1,13 @@
 #counts days inbetween birth ro current day taking into account leap years.
-    
+def daysInMonth(year, month):
+    return 30    
+
 def nextDay(year, month, day):
     """
     Returns the year, month, day of the next day.
     Simple version: assume every month has 30 days.
     """
-    if day < 30:
+    if day < daysInMonth(year, month):
         return year, month, day + 1
     else:
         if month < 12:
