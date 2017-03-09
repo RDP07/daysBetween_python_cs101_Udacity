@@ -1,12 +1,26 @@
 #counts days inbetween birth ro current day taking into account leap years.
+ 
+ def isLeapYear(year):
+    """Procedure to define when leapyear occured"""
+    if year % 400 == 0:
+        return True
+    if year % 100 == 0:
+        return False
+    if year % 4 == 0: 
+        return True
+    return False
+
 def daysInMonth(year, month):
+    """Correct version with correct days in each month and accounting for leap years."""
     if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
         return 31
     else:
         if month == 2:
+            if isLeapYear(year):
+                return 29
             return 28
         else:
-            return 30    
+            return 30  
 
 def nextDay(year, month, day):
     """
