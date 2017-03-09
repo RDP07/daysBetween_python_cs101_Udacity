@@ -51,7 +51,7 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     while dateIsBefore(year1, month1, day1, year2, month2, day2):
         year1, month1, day1 = nextDay(year1, month1, day1)
         days += 1
-        return days
+    return days
 
 def test():
     test_cases = [((2012,1,1,2012,2,28), 58), 
